@@ -34,8 +34,8 @@ if( isset($_POST['msg-submitted']) ) {
 		
 	if(!isset($hasError)) {
 		
-		$emailTo = 'youremail@domain.com';
-		$subject = 'New Submitted Message From: ' . $name;
+		$emailTo = 'vm+w@vinnie.io';
+		$subject = 'Website Message From: ' . $name;
 		$body = "Name: $name \n\nEmail: $email \n\nMessage: $message";
 		$headers = 'From: ' .' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
 
