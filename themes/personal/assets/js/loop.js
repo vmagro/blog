@@ -41,12 +41,12 @@ jQuery( function($){
 	/* navbar setting functions */
 	function setNavbarLight() {
 		$('.navbar').addClass('navbar-light');
-		$('.navbar-brand img').attr('src', 'assets/img/loop-logo.png');
+        $('.navbar-brand h1').css('color', '#646464');
 	}
 
 	function setNavbarTransparent() {
 		$('.navbar').removeClass('navbar-light');
-		$('.navbar-brand img').attr('src', 'assets/img/loop-logo-white.png');
+        $('.navbar-brand h1').css('color', '#fff');
 	}
 
 	// hide collapsible menu
