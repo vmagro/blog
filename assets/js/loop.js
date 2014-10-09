@@ -313,7 +313,7 @@ jQuery(function ($) {
             success: function formSuccess() {
                 $theForm.slideUp('medium', function () {
                     $alert.removeClass('alert-danger');
-                    $alert.addClass('alert-success').html($message).slideDown('medium');
+                    $alert.addClass('alert-success').html("Message submitted").slideDown('medium');
                 });
 
                 $btn.find('.loading-icon').removeClass('fa-spinner fa-spin ');
