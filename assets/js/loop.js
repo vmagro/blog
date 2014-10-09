@@ -320,7 +320,7 @@ jQuery(function ($) {
                 $btn.prop('disabled', false).find('span').text($btnText);
             },
             error: function formErr() {
-                $alert.addClass('alert-danger').html($message).slideDown('medium');
+                $alert.addClass('alert-danger').html("Failed to submit message").slideDown('medium');
             }
         });
 
