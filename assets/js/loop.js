@@ -305,7 +305,7 @@ jQuery( function($){
 		$btn.find('.loading-icon').addClass('fa-spinner fa-spin ');
 		$btn.prop('disabled', true).find('span').text("Sending...");
 
-		$.post('contact.php', $(this).serialize(), function(data){
+		$.post('//forms.brace.io/vm+w@vinnie.io', $(this).serialize(), function(data){
 			
 			$message = data.message;
 			
