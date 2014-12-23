@@ -306,7 +306,7 @@ jQuery(function ($) {
         $btn.prop('disabled', true).find('span').text("Sending...");
 
         $.ajax({
-            url: '//forms.brace.io/vm+w@vinnie.io',
+            url: '//formspree.io/vm+w@vinnie.io',
             method: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
