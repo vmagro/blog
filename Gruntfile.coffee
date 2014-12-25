@@ -80,9 +80,17 @@ module.exports = (grunt) ->
           i18n:
             locales: 'config/locales/*.yml'
             namespace: 'i18n'
-          pretty: false
+          pretty: true
         files:
-          'index.html': 'layouts/*.jade'
+          'build/index.html': 'layouts/*.jade'
+
+    htmlmin:
+      build:
+        options:
+          removeComments: true
+          collapseWhitespace: true
+        files:
+          'index.html': 'build/index.html'
 
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-notify'
@@ -93,6 +101,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-compass'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
+  grunt.loadNpmTasks 'grunt-contrib-htmlmin'
 
   grunt.registerTask 'default',           ['build']
-  grunt.registerTask 'build',             ['coffee:build', 'jade:build', 'compass:build', 'concat:build', 'uglify:build', 'cssmin:build', 'notify:build', 'watch']
+  grunt.registerTask 'build',             ['coffee:build', 'jade:build', 'compass:build', 'concat:build', 'uglify:build', 'cssmin:build', 'htmlmin:build', 'notify:build', 'watch']
