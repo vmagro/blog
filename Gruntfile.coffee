@@ -27,32 +27,52 @@ module.exports = (grunt) ->
         files:
           'tmp/coffee.js': ['scripts/*.coffee']
 
+    compass:
+      build:
+        options: {
+          sassDir: 'vendor/sass',
+          cssDir: 'build/css'
+        }
+
     concat:
       build:
-        src: ['vendor/js/jquery-2.1.0.min.js',
-              'vendor/js/bootstrap.min.js',
-              'vendor/js/jquery.scrollTo-1.4.3.1-min.js',
-              'vendor/js/jquery.localscroll-1.2.7-min.js',
-              'vendor/js/jquery.easing.min.js',
-              'vendor/js/supersized.3.2.7.min.js',
-              'vendor/js/supersized.shutter.min.js',
-              'vendor/js/jquery.parallax-1.1.3.js',
-              'vendor/js/imagesloaded.pkgd.js',
-              'vendor/js/jquery.isotope.js',
-              'vendor/js/wow.js',
-              'vendor/js/jpreloader.js',
-              'vendor/js/parsley.min.js',
-              'vendor/js/jquery.easypiechart.min.js',
-              'vendor/js/waypoints.min.js',
-              'vendor/js/jquery.magnific-popup.min.js',
-              'vendor/js/loop.js',
-              'tmp/coffee.js']
-        dest: 'all.js'
+        files: [
+          {
+            src: ['vendor/js/jquery-2.1.0.min.js',
+                  'vendor/js/bootstrap.min.js',
+                  'vendor/js/jquery.scrollTo-1.4.3.1-min.js',
+                  'vendor/js/jquery.localscroll-1.2.7-min.js',
+                  'vendor/js/jquery.easing.min.js',
+                  'vendor/js/supersized.3.2.7.min.js',
+                  'vendor/js/supersized.shutter.min.js',
+                  'vendor/js/jquery.parallax-1.1.3.js',
+                  'vendor/js/imagesloaded.pkgd.js',
+                  'vendor/js/jquery.isotope.js',
+                  'vendor/js/wow.js',
+                  'vendor/js/jpreloader.js',
+                  'vendor/js/parsley.min.js',
+                  'vendor/js/jquery.easypiechart.min.js',
+                  'vendor/js/waypoints.min.js',
+                  'vendor/js/jquery.magnific-popup.min.js',
+                  'vendor/js/loop.js',
+                  'tmp/coffee.js']
+            dest: 'build/all.js'
+          },
+          {
+            src: ['vendor/css/*.css', 'build/css/*.css'],
+            dest: 'build/all.css'
+          }
+        ]
 
     uglify:
       build:
         files:
-          'all.min.js': ['all.js']
+          'assets/all.min.js': ['build/all.js']
+
+    cssmin:
+      build:
+        files:
+          'assets/all.min.css': ['build/all.css']
 
     jade:
       build:
@@ -71,7 +91,8 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-devserver'
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
-  grunt.loadNpmTasks 'grunt-contrib-sass'
+  grunt.loadNpmTasks 'grunt-contrib-compass'
+  grunt.loadNpmTasks 'grunt-contrib-cssmin'
 
   grunt.registerTask 'default',           ['build']
-  grunt.registerTask 'build',             ['coffee:build', 'jade:build', 'concat:build', 'uglify:build', 'notify:build', 'watch']
+  grunt.registerTask 'build',             ['coffee:build', 'jade:build', 'compass:build', 'concat:build', 'uglify:build', 'cssmin:build', 'notify:build', 'watch']
