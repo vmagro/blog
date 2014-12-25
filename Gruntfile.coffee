@@ -71,6 +71,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-devserver'
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
+  grunt.loadNpmTasks 'grunt-contrib-sass'
 
   grunt.registerTask 'default',           ['build']
   grunt.registerTask 'build',             ['coffee:build', 'jade:build', 'concat:build', 'uglify:build', 'notify:build', 'watch']
