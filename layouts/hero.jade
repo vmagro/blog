@@ -1,0 +1,27 @@
+#hero-unit.hero-unit
+    .slideshow
+        .hero-content.text-right
+            .container
+                .row
+                    .col-lg-8.col-lg-offset-4
+                        #slidecaption.slide-caption
+                        .hero-buttons
+                            a#btn-about.btn.btn-info.btn-lg(href='#about')
+                                i.fa.fa-arrow-circle-o-down
+                                | READ MORE
+                            a#btn-contact.btn.btn-primary.btn-lg(href='#contact')
+                                i.fa.fa-phone-square
+                                | GET IN TOUCH
+        // Navigation
+        .slide-navigation
+            a#prevslide.load-item
+                i.fa.fa-angle-left
+            a#nextslide.load-item
+                i.fa.fa-angle-right
+            // Slide Pagination
+            ul#slide-list.list-inline
+            // Control Bar
+            #controls-wrapper.load-item
+                #controls
+                    a#pauseplay
+                        i.fa.fa-pause

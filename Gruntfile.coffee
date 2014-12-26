@@ -82,7 +82,7 @@ module.exports = (grunt) ->
             namespace: 'i18n'
           pretty: true
         files:
-          'build/index.html': 'layouts/*.jade'
+          'build/index.html': 'layouts/home.jade'
 
     htmlmin:
       build:
