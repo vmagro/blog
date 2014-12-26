@@ -25,7 +25,7 @@ module.exports = (grunt) ->
         options:
           bare: true
         files:
-          'tmp/coffee.js': ['scripts/*.coffee']
+          'build/coffee.js': ['scripts/*.coffee']
 
     compass:
       build:
@@ -54,8 +54,7 @@ module.exports = (grunt) ->
                   'vendor/js/jquery.easypiechart.min.js',
                   'vendor/js/waypoints.min.js',
                   'vendor/js/jquery.magnific-popup.min.js',
-                  'vendor/js/loop.js',
-                  'tmp/coffee.js']
+                  'build//coffee.js']
             dest: 'build/all.js'
           },
           {
