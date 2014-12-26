@@ -18,7 +18,7 @@ module.exports = (grunt) ->
       build:
         options:
           title: 'Woohoo!'
-          message: 'Scripts compiled successfully'
+          message: 'Site compiled successfully'
 
     coffee:
       build:
