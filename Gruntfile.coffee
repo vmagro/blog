@@ -12,7 +12,7 @@ module.exports = (grunt) ->
     watch:
       coffee:
         files: ['scripts/*.coffee', 'layouts/*.jade']
-        tasks: ['coffee:build', 'jade:build', 'concat:build', 'notify:build']
+        tasks: ['coffee:build', 'jade:build', 'compass:build', 'concat:build', 'uglify:build', 'cssmin:build', 'htmlmin:build', 'notify:build']
 
     notify:
       build:
