@@ -54,7 +54,7 @@ module.exports = (grunt) ->
                   'vendor/js/jquery.easypiechart.min.js',
                   'vendor/js/waypoints.min.js',
                   'vendor/js/jquery.magnific-popup.min.js',
-                  'build//coffee.js']
+                  'build/coffee.js']
             dest: 'build/all.js'
           },
           {
