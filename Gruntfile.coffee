@@ -91,6 +91,13 @@ module.exports = (grunt) ->
         files:
           'index.html': 'build/index.html'
 
+    jekyll:
+      build:
+        options:
+          src: 'blog_src'
+          dest: 'blog'
+          watch: true
+
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-notify'
   grunt.loadNpmTasks 'grunt-contrib-jade'
@@ -101,6 +108,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-compass'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
   grunt.loadNpmTasks 'grunt-contrib-htmlmin'
+  grunt.loadNpmTasks 'grunt-jekyll'
 
   grunt.registerTask 'default',           ['build']
-  grunt.registerTask 'build',             ['coffee:build', 'jade:build', 'compass:build', 'concat:build', 'uglify:build', 'cssmin:build', 'htmlmin:build', 'notify:build', 'watch']
+  grunt.registerTask 'build',             ['coffee:build', 'jade:build', 'compass:build', 'concat:build', 'uglify:build', 'cssmin:build', 'htmlmin:build', 'jekyll:build', 'notify:build', 'watch']

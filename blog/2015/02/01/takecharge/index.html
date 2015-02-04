@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Hi, my name is Vinnie. I am a sophomore at the University of Southern California studying Computer Engineering & Computer Science.">
+
+    <title>Take Charge - Vinnie Magro</title>
+
+    <link rel="canonical" href="http://vinnie.io//blog/2015/02/01/takecharge/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/blog/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/blog/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/blog/">Vinnie Magro</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="http://vinnie.io/">Home</a>
+                </li>
+                <li>
+                    <a href="/blog/">Blog</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/blog/img/take-charge-header.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Take Charge</h1>
+                    
+                    <h2 class="subheading">USB-based Android exploit allowing automated installation of unauthorized applications</h2>
+                    
+                    <span class="meta">Posted by Vinnie Magro on February 1, 2015</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<p>At <a href="http://www.ucsbhacks.com/">SB Hacks</a> last weekend, we built <a href="http://sbhacks.challengepost.com/submissions/32343-take-charge?utm_campaign=sb-hacks_20140908&amp;utm_content=submission_visible_in_gallery&amp;utm_medium=email&amp;utm_source=transactional">Take Charge</a>, a device that could be disguised as a standard USB charger, but secretly hides a way to install a data-mining application on unsuspecting users’ phones.</p>
+
+<p>We do this by taking advantage of the implicit trust that a user has in an innocent-looking phone charger and the trust that Android blindly gives to USB input devices. Take Charge emulates a normal USB keyboard,
+that is programmed to rapidly navigate through the Android settings menus to enable debugging and allow unknown sources, and then download our payload apk onto the device and install it on behalf of the user,
+granting an alarming number of permissions in a matter of seconds.</p>
+
+<p>See a video of Take Charge in action below:</p>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/LnVOQbqrt6Y" frameborder="0" allowfullscreen=""></iframe>
+
+<p>We use our emulated keyboard to unlock the device (doesn’t work if the user has a passcode, but things like Smart Unlock would still allow us to unlock the phone) after first waiting a few seconds so that the user isn’t looking at their phone to see what’s about to happen.
+We take advantage of the fact that the stock Android launcher allows you to run a search query by just typing text anywhere on the homescreen, so we search for “Settings”, and open the Settings app, enable unknown sources, then go download our data-mining APK from the internet, and install it using our full keyboard access.
+Then we go back to Settings and give Take Charge full access to notifications, so we can monitor all notifications that the user receives and upload them to our web dashboard in the background.</p>
+
+<p>We achieved this by using an Arduino Uno that is acting as a USB HID device by flashing an alternative firmware on the microcontroller that controls the Uno’s USB port as described <a href="http://mitchtech.net/arduino-usb-hid-keyboard/">here</a>.</p>
+
+<p>Our code is available on GitHub <a href="https://github.com/vmagro/TakeCharge">web interface + Arduino code</a>.</p>
+
+<p>Disclaimer: Take Charge is a proof of concept of a payload delivery system and a reminder to users to be more security conscious - Take Charge was never intended to be exploited.</p>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/blog/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/vinnie.magro">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/vmagro">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Vinnie Magro 2015</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/blog/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/blog/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/blog/js/clean-blog.min.js "></script>
+
+
+</body>
+
+</html>
