@@ -1,0 +1,16 @@
+# Site settings
+title: Vinnie Magro
+header-img: img/home-bg.jpg
+email: vm@vinnie.io
+description: "Hi, my name is Vinnie. I am a sophomore at the University of Southern California studying Computer Engineering & Computer Science."
+baseurl: "/blog"
+url: "http://vinnie.io"
+github_username:  vmagro
+facebook_username:  vinnie.magro
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
