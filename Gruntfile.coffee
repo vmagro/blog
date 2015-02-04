@@ -96,7 +96,6 @@ module.exports = (grunt) ->
         options:
           src: 'blog_src'
           dest: 'blog'
-          watch: true
 
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-notify'
