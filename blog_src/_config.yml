@@ -4,7 +4,8 @@ header-img: img/home-bg.jpg
 email: vm@vinnie.io
 description: "Hi, my name is Vinnie. I am a sophomore at the University of Southern California studying Computer Engineering & Computer Science."
 baseurl: "/blog"
-url: "http://vinnie.io"
+destination: "../blog"
+url: "http://vinnie.io/"
 github_username:  vmagro
 facebook_username:  vinnie.magro
 
