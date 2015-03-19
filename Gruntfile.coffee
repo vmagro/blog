@@ -11,8 +11,8 @@ module.exports = (grunt) ->
 
     watch:
       coffee:
-        files: ['scripts/*.coffee', 'layouts/*.jade']
-        tasks: ['coffee:build', 'jade:build', 'compass:build', 'concat:build', 'uglify:build', 'cssmin:build', 'htmlmin:build', 'notify:build']
+        files: ['scripts/*.coffee', 'layouts/*.jade', 'blog_src/*']
+        tasks: ['build']
 
     notify:
       build:
@@ -96,6 +96,11 @@ module.exports = (grunt) ->
         options:
           src: 'blog_src'
           dest: 'blog'
+      watch:
+        options:
+          src: 'blog_src'
+          dest: 'blog'
+          watch: true
 
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-notify'

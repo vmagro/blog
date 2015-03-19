@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Hi, my name is Vinnie. I am a sophomore at the University of Southern California studying Computer Engineering & Computer Science.">
 
-    <title>Take Charge - Vinnie Magro</title>
+    <title>eyeBeacon - Vinnie Magro</title>
 
-    <link rel="canonical" href="http://vinnie.io//blog/2015/02/01/takecharge/">
+    <link rel="canonical" href="http://vinnie.io//blog/2014/03/03/eyebeacon/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
@@ -71,16 +71,16 @@
 
 
     <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/blog/img/take-charge-header.png')">
+<header class="intro-header" style="background-image: url('/blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Take Charge</h1>
+                    <h1>eyeBeacon</h1>
                     
-                    <h2 class="subheading">USB-based Android exploit allowing automated installation of unauthorized applications</h2>
+                    <h2 class="subheading">Hyperlocal contextual information on Glass</h2>
                     
-                    <span class="meta">Posted by Vinnie Magro on February 1, 2015</span>
+                    <span class="meta">Posted by Vinnie Magro on March 3, 2014</span>
                 </div>
             </div>
         </div>
@@ -93,25 +93,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				<p>At <a href="http://www.ucsbhacks.com/">SB Hacks</a> last weekend, we built <a href="http://sbhacks.challengepost.com/submissions/32343-take-charge?utm_campaign=sb-hacks_20140908&amp;utm_content=submission_visible_in_gallery&amp;utm_medium=email&amp;utm_source=transactional">Take Charge</a>, a device that could be disguised as a standard USB charger, but secretly hides a way to install a data-mining application on unsuspecting users’ phones.</p>
+				<iframe src="//www.youtube.com/embed/BLHIGsmp1DE?rel=0" height="315" width="560" allowfullscreen="" frameborder="0"></iframe>
 
-<p>We do this by taking advantage of the implicit trust that a user has in an innocent-looking phone charger and the trust that Android blindly gives to USB input devices. Take Charge emulates a normal USB keyboard,
-that is programmed to rapidly navigate through the Android settings menus to enable debugging and allow unknown sources, and then download our payload apk onto the device and install it on behalf of the user,
-granting an alarming number of permissions in a matter of seconds.</p>
-
-<p>See a video of Take Charge in action below:</p>
-
-<iframe width="420" height="315" src="https://www.youtube.com/embed/LnVOQbqrt6Y" frameborder="0" allowfullscreen=""></iframe>
-
-<p>We use our emulated keyboard to unlock the device (doesn’t work if the user has a passcode, but things like Smart Unlock would still allow us to unlock the phone) after first waiting a few seconds so that the user isn’t looking at their phone to see what’s about to happen.
-We take advantage of the fact that the stock Android launcher allows you to run a search query by just typing text anywhere on the homescreen, so we search for “Settings”, and open the Settings app, enable unknown sources, then go download our data-mining APK from the internet, and install it using our full keyboard access.
-Then we go back to Settings and give Take Charge full access to notifications, so we can monitor all notifications that the user receives and upload them to our web dashboard in the background.</p>
-
-<p>We achieved this by using an Arduino Uno that is acting as a USB HID device by flashing an alternative firmware on the microcontroller that controls the Uno’s USB port as described <a href="http://mitchtech.net/arduino-usb-hid-keyboard/">here</a>.</p>
-
-<p>Our code is available on GitHub <a href="https://github.com/vmagro/TakeCharge">web interface + Arduino code</a>.</p>
-
-<p>Disclaimer: Take Charge is a proof of concept of a payload delivery system and a reminder to users to be more security conscious - Take Charge was never intended to be exploited.</p>
+<p>eyeBeacon provides hyperlocal contextual storytelling and payments through Google Glass and Pebble.
+Using Bluetooth LE iBeacons (powered by Raspberry Pi), eyeBeacon provides relevant information about buildings, museum exhibits, and anything else of interest,
+and allows seamless instant payments through Venmo, all triggered by proximity to a beacon. Potential applications include malls, stores, museums, campus tours,
+and anywhere else that requires location-based contextual information at an intimate level.</p>
 
 
                 <hr>
@@ -119,9 +106,13 @@ Then we go back to Settings and give Take Charge full access to notifications, s
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/blog/2014/04/02/how-i-reduced-the-cache-loading-time-of-photorun-by-250x/" data-toggle="tooltip" data-placement="top" title="How I reduced the cache loading time of PhotoRun by 250x">&larr; Previous Post</a>
+                        <a href="/blog/2014/01/29/such-roadtrip-wow/" data-toggle="tooltip" data-placement="top" title="Such Roadtrip. Wow">&larr; Previous Post</a>
                     </li>
                     
+                    
+                    <li class="next">
+                        <a href="/blog/2014/04/02/how-i-reduced-the-cache-loading-time-of-photorun-by-250x/" data-toggle="tooltip" data-placement="top" title="How I reduced the cache loading time of PhotoRun by 250x">Next Post &rarr;</a>
+                    </li>
                     
                 </ul>
 
