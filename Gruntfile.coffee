@@ -115,4 +115,5 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-jekyll'
 
   grunt.registerTask 'default',           ['build']
-  grunt.registerTask 'build',             ['coffee:build', 'jade:build', 'compass:build', 'concat:build', 'uglify:build', 'cssmin:build', 'htmlmin:build', 'jekyll:build', 'notify:build', 'watch']
+  grunt.registerTask 'build',             ['coffee:build', 'jade:build', 'compass:build', 'concat:build', 'uglify:build', 'cssmin:build', 'htmlmin:build', 'jekyll:build', 'notify:build']
+  grunt.registerTask 'serve', ['build', 'watch']
