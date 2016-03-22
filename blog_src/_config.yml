@@ -1,8 +1,8 @@
 # Site settings
-title: vinn
+title: Vinnie Magro
 header-img: img/home-bg.jpg
 email: vm@vinnie.io
-description: "Hi, my name is Vinnie. I am a junior at the University of Southern California studying Computer Engineering & Computer Science."
+description: "Hi, my name is Vinnie. I am a sophomore at the University of Southern California studying Computer Engineering & Computer Science."
 baseurl: "/blog"
 destination: "../blog"
 url: "http://vinnie.io/"
