@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3e6cf0a435a7cb424a73"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3b11c70ca07cd867b5c9"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -622,7 +622,7 @@
 	var history = (0, _createBrowserHistory2.default)();
 	
 	var user = window.localStorage['user'];
-	if (!user) {
+	if (!user || user === 'undefined') {
 	  var ref = new _firebase2.default('https://ee109.firebaseio.com');
 	  ref.authAnonymously(function (err, authData) {
 	    window.localStorage['user'] = (0, _stringify2.default)(authData);
@@ -24325,7 +24325,7 @@
 	        this.props.entries.map(function (e) {
 	          return _react2.default.createElement(
 	            'div',
-	            { key: e['.key'] },
+	            { key: e['.key'], style: { fontSize: 20 } },
 	            e.name,
 	            ' ',
 	            _this2._renderDelete(e)
