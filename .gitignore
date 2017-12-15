@@ -1,5 +1,3 @@
-.idea/
-node_modules/
-build/
-.sass-cache/
-*.iml
+public/
+
+.DS_Store
