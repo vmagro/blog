@@ -1,67 +1,169 @@
-baseURL = "https://vinn.ie/"
+baseurl = "/"
 languageCode = "en-us"
 title = "Vinnie Magro"
-theme = "bilberry-hugo-theme"
-
-enableRobotsTXT = true
-
-# Change to your content language. Supported values: en, de, es, fr, ru
-DefaultContentLanguage = "en"
-
-# Enable / Disable Google Analytics statistics for your site
+theme = "hugo-future-imperfect"
+preserveTaxonomyNames = true
+paginate = 3
+disqusShortname = "shortname"
 googleAnalytics = ""
-
-# Enable / Disable comments on the articles via Disqus.
-# disqusShortname = "bilberry-hugo-theme"
+pluralizeListTitles = false
 
 [params]
-  # Favicon for the browser's favorites and tabs
-  favicon = "" # set a favicon icon
+  # Sets the meta tag description
+  description          = "HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo"
+  # Sets the navbarTitle that appears in the top left of the navigation bar
+  navbarTitle          = "Vinnie Magro"
+  # Sets where "View More Posts" links
+  viewMorePostLink     = "/blog/"
 
-  # Description and meta data for the search engines
-  author = "Vinnie Magro"
-  description = "Vinnie Magro's blog"
-  keywords = "blog,personal"
+# Optional Params
+  # Sets navbarTitle to match the section of the website
+  dynamicTitles        = true
+  # Sets RSS icons to appear on the sidebar with the social media buttons
+  rssAppearAtTop       = true
+  rssAppearAtBottom    = true
+  # Sets Social Media icons to appear on the sidebar
+  socialAppearAtTop    = true
+  socialAppearAtBottom = true
+  # Sets Categories to sort by number of posts instead of alphabetical
+  categoriesByCount    = true
+  # Sets Estimated Reading Time to appear in post headers
+  includeReadingTime   = true
+  # Sets the Favicon and Version for the site. Default support is for
+  # apple-touch-icon-precomposed.png, favicon.png, favicon.ico, and mstile.png.
+  # These are stored in the favicon folder. See the following for more information:
+  # https://github.com/audreyr/favicon-cheat-sheet
+  loadFavicon          = false
+  faviconVersion       = ""
+  # Sets Social Share links to appear on posts
+  socialShare          = true
+  # Load custom CSS or JavaScript files. The variable is an array so that you
+  # can load multiple files if necessary. You can also load the standard theme
+  # files by adding the value, "default".
+  # customCSS            = ["default", "/path/to/file"]
+  # customJS             = ["default", "/path/to/file"]
+  customCSS            = ["default"]
+  customJS             = ["default"]
 
-  # How many articles should be displayed at once?
-  paginate = 7
+# Disqus will take priority over Staticman (github.com/eduardoboucas/staticman)
+# due to its ease of use. Feel free to check out both and decide what you would
+# prefer to use. See Staticman.yml for additional settings.
+[params.staticman]
+  # Sets Statiman to be active
+  staticman = false
+  # Sets the location for Staticman to connect to
+  username  = ""
+  repo      = ""
+  branch    = ""
 
-  # Enable / Disable MathJax
-  enable_mathjax    = false
+  [params.staticman.recaptcha]
+    sitekey = "SITE_KEY"
+    secret  = "ENCRYPTED_SECRET"
 
-  # Enable / Disable algolia search
-  algolia_search    = false
-  # algolia_appId     = "Y2C4RWMPXW"
-  # algolia_apiKey    = "50ea7f8c41c0ad233926e0be2b769ed1"
-  # algolia_indexName = "default-content"
+  # These are optional params related to the sidebar. They are recommended, but not
+  # required for proper functionality. HTML is supported within the params.
+[params.intro]
+  header    = "Vinnie Magro"
 
-  # Header configuration
-    # your subtitle if you want to use any
-    subtitle = "Hello World! This is the most epic subtitle ever."
+  paragraph = "Another fine responsive site template by <a href=\"http://html5up.net\">HTML5 UP</a>. Ported by Julio Pescador with some extra goodies <i class='fa fa-hand-peace-o'></i>"
 
-    # set an path to the image file you want to use | overwrites gravatar
-    customImage = "/avatar.jpg"
+  about     = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tellus lacus, auctor vehicula molestie quis, tempor quis velit. Quisque in quam ac leo efficitur vulputate. Phasellus ullamcorper aliquam sodales. Maecenas sit amet condimentum ipsum. Proin sit amet ligula elit. Mauris."
 
-    # always display the top navigation (with pages and search) on non-mobile screens
-    permanentTopNav = false
+  # This appears at the top of the sidebar above params.intro.header.
+  # A width of less than 100px is recommended from a design perspective.
+  [params.intro.pic]
+    src       = "/img/main/logo.jpg"
+    # Sets Image to be a cirlce
+    circle    = false
+    # Sets Image to be Future Imperfect's hexagon
+    imperfect = true
+    width     = ""
+    alt       = "Hugo Future Imperfect"
 
-  # social media profile urls for the footer links
-  facebook   = "https://facebook.com/vinnie.magro"
-  twitter    = ""
-  googleplus = ""
-  pinterest  = ""
-  instagram  = ""
-  tumblr     = ""
-  youtube    = ""
-  vimeo      = ""
-  github     = "https://github.com/vmagro"
+[params.postAmount]
+# Sets the number of recent posts to show in the sidebar. The default value is 5.
+    sidebar = 5
 
-# don't change anything here
-[taxonomies]
-  author   = "author"
-  tag      = "tags"
-  category = "categories"
+# Sets the menu items in the navigation bar
+# Identifier prepends a Font Awesome icon to the menu item
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  identifier = "fa fa-home"
+  weight = 1
 
-[outputs]
-  home = [ "HTML", "JSON" ]
-  page = [ "HTML" ]
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  identifier = "fa fa-id-card-o"
+  weight = 2
+
+[[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  identifier = "fa fa-newspaper-o"
+  weight = 3
+
+[[menu.main]]
+  name = "Itemized"
+  url = "/itemized/"
+  identifier = "fa fa-list"
+  weight = 4
+
+[[menu.main]]
+  name = "Categories"
+  url = "/categories/"
+  identifier = "fa fa-sitemap"
+  weight = 5
+
+[[menu.main]]
+  name = "Contact"
+  url = "/contact/"
+  identifier = "fa fa-envelope-o"
+  weight = 6
+
+# Sets Social Media icons to appear and link to your account. Value should be your
+# username unless otherwise noted. These are the icons affected by socialAppearAtTop
+# and socialAppearAtBottom.
+[social]
+  # Coding Communities
+  github          = "vmagro"
+  gitlab          = ""
+  stackoverflow   = "" # User Number
+  bitbucket       = ""
+  jsfiddle        = ""
+  codepen         = ""
+  # Visual Art Communities
+  deviantart      = ""
+  flickr          = ""
+  behance         = ""
+  dribbble        = ""
+  # Publishing Communities
+  wordpress       = ""
+  medium          = ""
+  # Professional/Business Oriented Communities
+  linkedin        = ""
+  foursquare      = ""
+  xing            = ""
+  slideshare      = ""
+  # Social Networks
+  facebook        = "vinnie.magro"
+  googleplus      = ""
+  reddit          = ""
+  quora           = ""
+  youtube         = ""
+  vimeo           = ""
+  whatsapp        = "" # WhatsApp Number
+    # WeChat and QQ need testing.
+    wechat          = ""
+    qq              = "" # User ID Number
+  instagram       = "vinvinvinster"
+  tumblr          = ""
+  twitter         = ""
+  skype           = ""
+  snapchat        = ""
+  pinterest       = ""
+  telegram        = ""
+  vine            = ""
+  # Email
+  email           = "v@vinnie.io"
