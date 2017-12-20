@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Vinnie Magro"
 theme = "hugo-future-imperfect"
 preserveTaxonomyNames = true
-paginate = 3
+paginate = 5
 googleAnalytics = ""
 pluralizeListTitles = false
 
