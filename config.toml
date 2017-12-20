@@ -9,7 +9,7 @@ pluralizeListTitles = false
 
 [params]
   # Sets the meta tag description
-  description          = "HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo"
+  description          = "Vinnie Magro"
   # Sets the navbarTitle that appears in the top left of the navigation bar
   navbarTitle          = "Vinnie Magro"
   # Sets where "View More Posts" links
@@ -92,42 +92,8 @@ pluralizeListTitles = false
 [social]
   # Coding Communities
   github          = "vmagro"
-  gitlab          = ""
-  stackoverflow   = "" # User Number
-  bitbucket       = ""
-  jsfiddle        = ""
-  codepen         = ""
-  # Visual Art Communities
-  deviantart      = ""
-  flickr          = ""
-  behance         = ""
-  dribbble        = ""
-  # Publishing Communities
-  wordpress       = ""
-  medium          = ""
-  # Professional/Business Oriented Communities
-  linkedin        = ""
-  foursquare      = ""
-  xing            = ""
-  slideshare      = ""
   # Social Networks
   facebook        = "vinnie.magro"
-  googleplus      = ""
-  reddit          = ""
-  quora           = ""
-  youtube         = ""
-  vimeo           = ""
-  whatsapp        = "" # WhatsApp Number
-    # WeChat and QQ need testing.
-    wechat          = ""
-    qq              = "" # User ID Number
   instagram       = "vinvinvinster"
-  tumblr          = ""
-  twitter         = ""
-  skype           = ""
-  snapchat        = ""
-  pinterest       = ""
-  telegram        = ""
-  vine            = ""
   # Email
   email           = "v@vinnie.io"
