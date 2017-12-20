@@ -6,6 +6,9 @@ linktitle = ""
 title = "eyeBeacon"
 description = "Hyperlocal contextual information on Glass"
 type = "post"
+featured = "eyebeacon.jpg"
+featuredalt = "eyeBeacon"
+featuredpath = "date"
 
 +++
 
