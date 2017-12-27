@@ -7,7 +7,7 @@ title = "Test from PR"
 description = "Test post"
 type = "post"
 featured = "launchiphone6.jpg"
-featuredalt = "launchiphone6.jpg"
+featuredalt = "launchiphone6.png"
 featuredpath = "date"
 
 +++
