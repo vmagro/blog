@@ -6,7 +6,7 @@ linktitle = ""
 title = "Test from PR"
 description = "Test post"
 type = "post"
-featured = "launchiphone6.jpg"
+featured = "launchiphone6.png"
 featuredalt = "launchiphone6.png"
 featuredpath = "date"
 
