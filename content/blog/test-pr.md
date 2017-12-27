@@ -9,4 +9,5 @@ type = "post"
 
 +++
 
-This is a test post from a PR on GitHub
+This is a test post from a PR on GitHub  
+Now I'm adding another line
